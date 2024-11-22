@@ -35,7 +35,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: var(--space-8x);
-  color: var(--brand);
+  color: var(--brand-light);
 }
 
 .info {
@@ -100,7 +100,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: var(--space-8x);
-    color: var(--brand);
+    color: var(--brand-light);
   }
 
   .info {
