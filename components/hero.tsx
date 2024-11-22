@@ -32,9 +32,11 @@ export default function Hero() {
       >
         {SITE_DESCRIPTION}
       </h2>
-      <h1 className={cn(styleUtils.appear, styleUtils['appear-third'], styles.hero)}>
-        Welcome to the
-        <br className={styleUtils['show-on-desktop']} /> {BRAND_NAME} conference
+      {/* <h1 className={cn(styleUtils.appear, styleUtils['appear-third'], styles.hero)}> */}
+      <h1 className={cn(styleUtils.appear, styleUtils['appear-first'], styles.hero)}>
+        {/* Welcome to the
+        <br className={styleUtils['show-on-desktop']} /> {BRAND_NAME} conference */}
+        Juke Vox
       </h1>
       <h2
         className={cn(
@@ -46,13 +48,25 @@ export default function Hero() {
       >
         {SITE_DESCRIPTION}
       </h2>
-      <div className={cn(styleUtils.appear, styleUtils['appear-fourth'], styles.info)}>
-        <p>{DATE}</p>
+      {/* <div className={cn(styleUtils.appear, styleUtils['appear-fourth'], styles.info)}> */}
+      <div className={cn(styleUtils.appear, styleUtils['appear-second'], styles.sub)}>
+        {/* <p>{DATE}</p>
         <div className={styles['description-separator']} />
         <p>
           <strong>Online</strong>
-        </p>
+        </p> */}
+        <b>良い声の良い曲で踊る</b>&nbsp;Seiyu Music Party
       </div>
+      <div className={cn(styleUtils.appear, styleUtils['appear-third'], styles.info)}>
+        <b>Next</b>
+      </div>
+      <div className={cn(styleUtils.appear, styleUtils['appear-fourth'], styles.info)}>
+        2024 12 07 Sat
+      </div>
+      <div className={cn(styleUtils.appear, styleUtils['appear-fifth'], styles.info)}>
+        @ 秋葉原 MOGRA
+      </div>
+
     </div>
   );
 }
