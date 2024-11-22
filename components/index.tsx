@@ -50,8 +50,8 @@ export default function Conf({
           {pageState === 'registration' && !sharePage ? (
             <>
               <Hero />
-              <Form />
-              <LearnMore />
+              {/* <Form /> */}
+              {/* <LearnMore /> */}
             </>
           ) : (
             <Ticket
