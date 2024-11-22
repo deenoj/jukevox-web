@@ -29,6 +29,64 @@ type Props = {
   speakers: Speaker[];
 };
 
+const djs: Speaker[] = [
+  {
+    name: "mopp",
+    bio: "Test Bio",
+    title: "Test Title",
+    slug: "Test Slug",
+    twitter: "Test Twitter",
+    github: "Test GitHub",
+    company: "アイムエンタープライズ",
+    talk: {
+      title: "Test Talk Title",
+      description: "Test Talk Description",
+      start: "Test Talk Start",
+      end: "Test Talk End",
+      speaker: [],
+    },
+    image: { url: "https://images.prismic.io/nextjs-conference/4674eedd-c52c-422b-9e0a-601d19fef2ab_image+%2823%29.jpeg" },
+    imageSquare: { url: "https://images.prismic.io/nextjs-conference/4674eedd-c52c-422b-9e0a-601d19fef2ab_image+%2823%29.jpeg" },
+  },
+  {
+    name: "sinker",
+    bio: "Test Bio",
+    title: "Test Title",
+    slug: "Test Slug",
+    twitter: "Test Twitter",
+    github: "Test GitHub",
+    company: "81プロデュース",
+    talk: {
+      title: "Test Talk Title",
+      description: "Test Talk Description",
+      start: "Test Talk Start",
+      end: "Test Talk End",
+      speaker: [],
+    },
+    image: { url: "https://images.prismic.io/nextjs-conference/6f3474a1-5525-41e7-a3fd-76918d36e251_image+%2822%29.jpeg" },
+    imageSquare: { url: "https://images.prismic.io/nextjs-conference/6f3474a1-5525-41e7-a3fd-76918d36e251_image+%2822%29.jpeg" },
+  },
+  {
+    name: "だーよし",
+    bio: "Test Bio",
+    title: "Test Title",
+    slug: "Test Slug",
+    twitter: "Test Twitter",
+    github: "Test GitHub",
+    company: "青二プロダクション",
+    talk: {
+      title: "Test Talk Title",
+      description: "Test Talk Description",
+      start: "Test Talk Start",
+      end: "Test Talk End",
+      speaker: [],
+    },
+    image: { url: "https://images.prismic.io/nextjs-conference/cfdc2089-a4f4-4db6-ab5d-f383c51757b3_image+%2821%29.jpeg" },
+    imageSquare: { url: "https://images.prismic.io/nextjs-conference/cfdc2089-a4f4-4db6-ab5d-f383c51757b3_image+%2821%29.jpeg" },
+  },
+
+]
+
 export default function Speakers({ speakers }: Props) {
   const meta = {
     title: 'Speakers - Virtual Event Starter Kit',
@@ -37,7 +95,8 @@ export default function Speakers({ speakers }: Props) {
   return (
     <Page meta={meta}>
       <Layout>
-        <Header hero="Speakers" description={meta.description} />
+        {/* <Header hero="Speakers" description={meta.description} /> */}
+        <Header hero="DJs" description="フロアが沸いて沸いてしゃーない" />
         <SpeakersGrid speakers={speakers} />
       </Layout>
     </Page>
@@ -49,7 +108,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
   return {
     props: {
-      speakers: speakers || []
+      // speakers: speakers || []
+      speakers: djs
     },
     revalidate: 60
   };

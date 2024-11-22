@@ -17,6 +17,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Speaker } from '@lib/types';
+import cn from 'classnames';
+import styleUtils from './utils.module.css';
 import styles from './speakers-grid.module.css';
 
 type Props = {
@@ -25,7 +27,8 @@ type Props = {
 
 export default function SpeakersGrid({ speakers }: Props) {
   return (
-    <div className={styles.grid}>
+    // <div className={styles.grid}>
+    <div className={cn(styleUtils.appear, styleUtils['appear-third'], styles.grid)}>
       {speakers?.map(speaker => (
         <Link
           key={speaker.name}
@@ -52,7 +55,7 @@ export default function SpeakersGrid({ speakers }: Props) {
             <div>
               <h2 className={styles.name}>{speaker.name}</h2>
               <p className={styles.title}>
-                {`${speaker.title} @ `}
+                {/* {`${speaker.title} @ `} */}
                 <span className={styles.company}>{speaker.company}</span>
               </p>
             </div>
