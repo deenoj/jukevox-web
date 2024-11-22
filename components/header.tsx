@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 
+import cn from 'classnames';
+import styleUtils from './utils.module.css';
 import styles from './header.module.css';
 
 type Props = {
@@ -24,8 +26,10 @@ type Props = {
 export default function Header({ hero, description }: Props) {
   return (
     <>
-      <h1 className={styles.hero}>{hero}</h1>
-      <p className={styles.description}>{description}</p>
+      {/* <h1 className={styles.hero}>{hero}</h1>
+      <p className={styles.description}>{description}</p> */}
+      <h1 className={cn(styleUtils.appear, styleUtils['appear-first'], styles.hero)}>{hero}</h1>
+      <p className={cn(styleUtils.appear, styleUtils['appear-second'], styles.description)}>{description}</p>
     </>
   );
 }
